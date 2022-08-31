@@ -8,8 +8,7 @@ public class King extends ChessPiece{
 
 	public King(Board board, Color color) {
 		super(board, color);
-		System.out.println("Ola");
-	}
+		}
 	
 	@Override
 	public String toString() {
