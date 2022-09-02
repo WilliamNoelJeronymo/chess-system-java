@@ -35,6 +35,9 @@ public class ChessMatch {
 		if (!board.thereIsAPiece(position)) {
 			throw new ChessException("there is no pieces on source position"); 	
 		}
+		if(!board.pieces(position).isThereAnyPossibleMove()) {
+			throw new ChessException("there is no possible moves for the chosen piece");
+		}
 	}
 	private Piece makeMove(Position source, Position target) {
 		Piece p = board.removePiece(source);
